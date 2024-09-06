@@ -28,3 +28,10 @@ body{
     justify-content: space-evenly;
     margin-bottom: 8px;
 }
+.question_footer{
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 24rem;
+}
