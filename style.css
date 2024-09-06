@@ -29,8 +29,12 @@ body{
     margin-bottom: 8px;
 }
 .question_footer{
+    border-top: 1px solid;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 .card{
     width: 24rem;
