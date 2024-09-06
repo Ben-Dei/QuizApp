@@ -1,15 +1,14 @@
-body{
-    background-color: darkgreen !important;
-    min-width: 100vh;
-}
-h1{
-    color: aqua !important;
-}
-.navbar{
-    background-color: rgb(113, 219, 113) !important;
-}
 .container{
+    min-width: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: darkgreen;
 }
+
+.navbar{
+    background-color: rgb(113, 219, 113) !important;
+    min-width: 100vh;
+}
+
