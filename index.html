@@ -15,7 +15,7 @@
             crossorigin="anonymous"></script>
             <link rel="icon" href="./asset/icon/logo.png">
 </head>
-<body>
+<body onload="init()">
     <nav class="navbar">
         <div class="container-fluid">
           <span class="navbar-brand mb-0 h1">QuizApp</span>
@@ -26,19 +26,19 @@
         <div class="card">
             <img src="./asset/img/Quiz_night.jpg" class="card-img-top">
             <div class="card-body">
-              <h5 class="card-title">FRAGE</h5>
+              <h5 class="card-title" id="questiontext">FRAGE</h5>
                 <div class="upper_line">
-                    <div class="answer_to_question"><button>Antwort</button></div>
-                    <div class="answer_to_question"><button>Antwort</button></div>
+                    <div class="answer_to_question" id="answer_1"><button>Antwort</button></div>
+                    <div class="answer_to_question" id="answer_2"><button>Antwort</button></div>
                 </div>
                 <div class="under_line">
-                    <div class="answer_to_question"><button>Antwort</button></div>
-                    <div class="answer_to_question"><button>Antwort</button></div>
+                    <div class="answer_to_question" id="answer_3"><button>Antwort</button></div>
+                    <div class="answer_to_question" id="answer_4"><button>Antwort</button></div>
                 </div>
             </div>
             <div class="question_footer">
                 <span>
-                    <b>1</b> von <b>5</b> Fragen
+                    <b>1</b> von <b id="all-questions">5</b> Fragen
                 </span>
                 <button type="button" class="btn btn-success">Nächste Frage</button>
           </div>
