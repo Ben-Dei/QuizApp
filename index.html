@@ -28,19 +28,19 @@
             <div class="card-body">
               <h5 class="card-title" id="questiontext">FRAGE</h5>
                 <div class="upper_line">
-                    <div class="answer_to_question" id="answer_1"><button>Antwort</button></div>
-                    <div class="answer_to_question" id="answer_2"><button>Antwort</button></div>
+                    <div class="answer_to_question" id="answer_1" onclick="answer('answer_1')">Antwort</div>
+                    <div class="answer_to_question" id="answer_2" onclick="answer('answer_2')">Antwort</div>
                 </div>
                 <div class="under_line">
-                    <div class="answer_to_question" id="answer_3"><button>Antwort</button></div>
-                    <div class="answer_to_question" id="answer_4"><button>Antwort</button></div>
+                    <div class="answer_to_question" id="answer_3" onclick="answer('answer_3')">Antwort</div>
+                    <div class="answer_to_question" id="answer_4" onclick="answer('answer_4')">Antwort</div>
                 </div>
             </div>
             <div class="question_footer">
                 <span>
                     <b>1</b> von <b id="all-questions">5</b> Fragen
                 </span>
-                <button type="button" class="btn btn-success">Nächste Frage</button>
+                <button class="btn btn-success" id="next-button" disabled>Nächste Frage</button>
           </div>
     </div>
 

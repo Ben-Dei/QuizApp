@@ -39,3 +39,13 @@ body{
 .card{
     width: 24rem;
 }
+.answer_to_question:hover{
+    cursor: pointer;
+    background-color: rgba(18, 37, 20, 0.185);
+}
+.answer_to_question{
+    background-color: aqua;
+}
+.bg-success, .bg-danger{
+    color: white;
+}
