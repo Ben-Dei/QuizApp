@@ -50,14 +50,25 @@ function init(){
 }
 
 function showQuestion(){
-        let question = questions[currentQuestion];
 
-        document.getElementById('questiontext').innerHTML = question['question'];
-        document.getElementById('answer_1').innerHTML = question['answer_1'];
-        document.getElementById('answer_2').innerHTML = question['answer_2'];
-        document.getElementById('answer_3').innerHTML = question['answer_3'];
-        document.getElementById('answer_4').innerHTML = question['answer_4'];     
-}
+        if (currentQuestion >= questions.length){
+
+                document.getElementById('endScreen').style = '';
+                document.getElementById('questionBodyUpperPart').style = 'display: none';
+                document.getElementById('questionBodyUnderPart').style = 'display: none';
+                document.getElementById('questiontext').style = 'display: none';
+        } else {
+                let question = questions[currentQuestion];
+
+                document.getElementById('question-number').innerHTML = currentQuestion + 1;
+                document.getElementById('questiontext').innerHTML = question['question'];
+                document.getElementById('answer_1').innerHTML = question['answer_1'];
+                document.getElementById('answer_2').innerHTML = question['answer_2'];
+                document.getElementById('answer_3').innerHTML = question['answer_3'];
+                document.getElementById('answer_4').innerHTML = question['answer_4'];     
+
+        }
+}        
 
 function answer(selection){
         let question = questions[currentQuestion];
@@ -71,4 +82,28 @@ function answer(selection){
                 document.getElementById(idOfRightAnswer).classList.add('bg-success');
         }
         document.getElementById('next-button').disabled = false;
+}
+function nextQuestion(){
+        currentQuestion++;
+        showQuestion();
+
+        document.getElementById('next-button').disabled = true;
+
+        resetAnswerButtons();
+        
+
+}
+
+function resetAnswerButtons(){
+
+        document.getElementById('answer_1').classList.remove('bg-danger');
+        document.getElementById('answer_1').classList.remove('bg-success');
+        document.getElementById('answer_2').classList.remove('bg-danger');
+        document.getElementById('answer_2').classList.remove('bg-success');
+        document.getElementById('answer_3').classList.remove('bg-danger');
+        document.getElementById('answer_3').classList.remove('bg-success');
+        document.getElementById('answer_4').classList.remove('bg-danger');
+        document.getElementById('answer_4').classList.remove('bg-success');
+        document.getElementById('answer_5').classList.remove('bg-danger');
+        document.getElementById('answer_5').classList.remove('bg-success');
 }

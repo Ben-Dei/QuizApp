@@ -18,15 +18,17 @@ body{
 }
 .upper_line{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    gap: 16px;
 }
 .under_line{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    gap: 16px;
 }
 .question_footer{
     border-top: 1px solid;
@@ -48,4 +50,16 @@ body{
 }
 .bg-success, .bg-danger{
     color: white;
+}
+.victory-img{
+    width: 64px;
+    height: auto;
+   
+}
+.victory-screen{
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
